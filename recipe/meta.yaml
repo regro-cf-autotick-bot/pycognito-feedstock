@@ -1,18 +1,18 @@
 {% set name = "pycognito" %}
-{% set version = "2021.3.1" %}
+{% set version = "2021.11.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 3a496364b697d744b37187d0ca3d950abc7540653455240477e4a41c3ba887a1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 68f3afcc65c1977430bbde9c0d243485614d13c3ee94b243894854fd15060353
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,10 +30,10 @@ test:
     - pycognito
 
 about:
-  home: "https://github.com/pvizeli/pycognito"
+  home: https://github.com/pvizeli/pycognito
   license: Apache-2.0
   license_file: LICENSE
-  summary: "Python class to integrate Boto3's Cognito client so it is easy to login users. With SRP support."
+  summary: Python class to integrate Boto3's Cognito client so it is easy to login users. With SRP support.
   doc_url: https://github.com/pvizeli/pycognito/blob/master/README.md
   dev_url: https://github.com/pvizeli/pycognito
 
