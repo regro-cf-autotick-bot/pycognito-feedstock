@@ -1,5 +1,5 @@
 {% set name = "pycognito" %}
-{% set version = "2022.4.0" %}
+{% set version = "2022.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6b182576be28e0c71d4a12b91fdb4efb00e5a9a7a43dee9aef7dd52ab8efd084
+  sha256: ad33022d78506ce672ef9ff1cf4a0d4d3eb096b5ff73320f355bf5526f0aa36a
 
 build:
   number: 0
